@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardia Digital - Prevención de Fraudes</title>
+    <title>Guardia Digital - Recuperador de Fraudes Digitales</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,237 +41,284 @@
             background-color: #003366;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+        .bg-pattern-light {
+            background-image: radial-gradient(#C8102E 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+        }
     </style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
     <!-- Navbar -->
     <nav class="bg-brand-blue text-white shadow-lg sticky top-0 z-50 border-b-4 border-brand-mustard">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
             <div class="flex items-center space-x-3">
-                <div class="bg-white p-2 rounded-full text-brand-blue">
+                <div class="bg-white p-2 rounded-full text-brand-blue border-2 border-brand-mustard">
                     <i class="fas fa-shield-alt text-2xl"></i>
                 </div>
                 <div>
                     <h1 class="font-heading font-extrabold text-xl tracking-wider uppercase leading-none">Guardia</h1>
-                    <span class="font-light text-sm tracking-widest uppercase">Digital</span>
+                    <span class="font-light text-sm tracking-widest uppercase text-brand-mustard">Digital</span>
                 </div>
             </div>
             <div class="hidden md:flex space-x-6 font-bold text-sm uppercase">
                 <a href="#inicio" class="hover:text-brand-mustard transition">Inicio</a>
-                <a href="#alertas" class="hover:text-brand-mustard transition">Alertas Recientes</a>
-                <a href="#guias" class="hover:text-brand-mustard transition">Guías de Prevención</a>
+                <a href="#servicios" class="hover:text-brand-mustard transition">Recuperación</a>
+                <a href="#casos" class="hover:text-brand-mustard transition">Tipos de Fraude</a>
                 <a href="#contacto" class="hover:text-brand-mustard transition">Contacto</a>
             </div>
-            <a href="tel:088" class="bg-brand-red hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow-md transition flex items-center gap-2 animate-pulse">
-                <i class="fas fa-phone-alt"></i> Reporta al 088
-            </a>
+            <div class="flex gap-2">
+                <a href="tel:5535525857" class="bg-brand-mustard hover:bg-yellow-500 text-brand-blue font-bold py-2 px-4 rounded shadow-md transition flex items-center gap-2">
+                    <i class="fas fa-phone"></i> 55 3552 5857
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="inicio" class="hero-pattern text-white py-16 lg:py-24 relative overflow-hidden">
+    <header id="inicio" class="hero-pattern text-white py-20 lg:py-28 relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <div class="inline-block bg-brand-mustard text-brand-blue font-bold px-3 py-1 rounded mb-4 text-sm uppercase shadow-sm">
-                    <i class="fas fa-exclamation-triangle mr-2"></i> Prevención de Delitos Cibernéticos
+            <div class="md:w-3/5 mb-10 md:mb-0 text-center md:text-left">
+                <div class="inline-block bg-brand-red text-white font-bold px-4 py-1 rounded mb-4 text-sm uppercase shadow-sm tracking-wide">
+                    <i class="fas fa-gavel mr-2"></i> Defensa y Recuperación Patrimonial
                 </div>
                 <h2 class="font-heading text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                    ¡PONTE EN <br><span class="text-brand-red bg-white px-2 shadow-lg transform -skew-x-12 inline-block">GUARDIA!</span>
+                    RECUPERAR TU DINERO <br>
+                    <span class="text-brand-mustard">ES NUESTRO OBJETIVO</span>
                 </h2>
-                <p class="text-lg md:text-xl mb-8 text-gray-200 max-w-lg">
-                    Tu patrimonio y tus datos personales están en riesgo. Aprende a identificar fraudes financieros, robo de identidad y estafas digitales.
+                <p class="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl leading-relaxed">
+                    Somos el <strong>Recuperador de Fraudes Digitales</strong> líder en México. Especialistas en derecho y finanzas comprometidos con proteger tu patrimonio y tus derechos. No estás solo; cientos de personas recuperan su inversión con nuestra ayuda.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#guias" class="bg-brand-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded shadow-lg text-center transition">
-                        Ver Recomendaciones
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contacto" class="bg-brand-mustard hover:bg-yellow-500 text-brand-blue font-bold py-4 px-8 rounded shadow-lg text-center transition transform hover:-translate-y-1">
+                        <i class="fas fa-file-signature mr-2"></i> Análisis de Caso Gratuito
                     </a>
-                    <a href="#contacto" class="bg-transparent border-2 border-white hover:bg-white hover:text-brand-blue text-white font-bold py-3 px-8 rounded text-center transition">
-                        ¿Fuiste Víctima?
+                    <a href="#servicios" class="bg-transparent border-2 border-white hover:bg-white hover:text-brand-blue text-white font-bold py-4 px-8 rounded text-center transition">
+                        Conoce el Proceso
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <!-- Abstract graphic representation of security -->
-                <div class="relative">
-                    <div class="absolute top-0 right-0 -mr-10 -mt-10 w-32 h-32 bg-brand-mustard rounded-full opacity-20 blur-xl"></div>
-                    <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 bg-brand-red rounded-full opacity-20 blur-xl"></div>
-                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Seguridad Digital" class="rounded-lg shadow-2xl border-4 border-white relative z-10 w-full max-w-md mx-auto transform rotate-2 hover:rotate-0 transition duration-500">
+            <div class="md:w-2/5 flex justify-center relative">
+                <!-- Decorative Circle -->
+                <div class="absolute w-64 h-64 bg-brand-red rounded-full opacity-20 blur-2xl top-0 right-10 animate-pulse"></div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-2xl relative z-10 max-w-sm border-t-8 border-brand-red">
+                    <h3 class="text-brand-blue font-bold text-xl mb-4 border-b pb-2">¿Fuiste Víctima?</h3>
+                    <ul class="space-y-3 text-gray-700 mb-6">
+                        <li class="flex items-center"><i class="fas fa-times-circle text-brand-red mr-3 text-xl"></i> Inversiones falsas</li>
+                        <li class="flex items-center"><i class="fas fa-times-circle text-brand-red mr-3 text-xl"></i> Robo de identidad</li>
+                        <li class="flex items-center"><i class="fas fa-times-circle text-brand-red mr-3 text-xl"></i> Cargos no reconocidos</li>
+                    </ul>
+                    <a href="tel:5535525857" class="block w-full bg-brand-blue text-white text-center py-3 rounded font-bold hover:bg-blue-900 transition">
+                        Llama Ahora: 55 3552 5857
+                    </a>
+                    <p class="text-center text-xs text-gray-500 mt-2">Asesoría confidencial y gratuita</p>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Ticker de Alerta -->
-    <div class="bg-brand-mustard text-brand-dark py-2 font-bold uppercase text-sm overflow-hidden whitespace-nowrap">
+    <div class="bg-brand-dark text-white py-3 font-bold uppercase text-sm border-b border-gray-700 shadow-md">
         <div class="container mx-auto px-4 flex items-center">
-            <span class="mr-4 bg-black text-brand-mustard px-2 py-0.5 rounded text-xs">ALERTA</span>
+            <span class="mr-4 bg-brand-red text-white px-3 py-1 rounded text-xs animate-pulse">URGENTE</span>
             <marquee behavior="scroll" direction="left">
-                No confíes en aplicaciones de préstamos "rápidos" sin verificar en SIPRES • Evita fraudes piramidales en redes sociales • Verifica que las páginas de gobierno terminen en .gob.mx • No deposites anticipos por rentas sin ver el inmueble.
+                Defensa inmediata contra fraudes piramidales • Recuperación de fondos por transferencias engañosas • Asesoría legal contra aplicaciones "montadeudas" • Reporta cualquier actividad sospechosa al 55 3552 5857.
             </marquee>
         </div>
     </div>
 
-    <!-- Secciones Principales (Grid) -->
-    <main id="guias" class="container mx-auto px-4 py-16">
-        <div class="text-center mb-16">
-            <h3 class="text-brand-red font-bold uppercase tracking-widest text-sm mb-2">Protégete</h3>
-            <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-blue">Guías de Prevención</h2>
-            <div class="w-24 h-1 bg-brand-red mx-auto mt-4"></div>
+    <!-- Sección de Servicios / Proceso -->
+    <section id="servicios" class="py-20 bg-white relative">
+        <div class="absolute inset-0 bg-pattern-light pointer-events-none"></div>
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold tracking-widest uppercase text-sm">Nuestra Metodología</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark mt-2">¿Cómo Recuperamos tu Dinero?</h2>
+                <div class="w-24 h-1 bg-brand-mustard mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Nuestro equipo de abogados y financieros traza una ruta crítica para rastrear y reclamar tus activos ante las instancias correspondientes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Paso 1 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-lg group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-brand-dark">1. Análisis y Diagnóstico</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed px-4">
+                        Evaluamos la viabilidad de tu caso sin costo. Analizamos la evidencia digital, transferencias y el modus operandi del fraude para determinar la ruta legal.
+                    </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-brand-red text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-lg group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-brand-dark">2. Estrategia Legal</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed px-4">
+                        Implementamos acciones legales y administrativas ante bancos, CONDUSEF y autoridades cibernéticas para bloquear cuentas fraudulentas y exigir la devolución.
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-brand-mustard text-brand-blue rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-lg group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-brand-dark">3. Negociación y Recuperación</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed px-4">
+                        Gestionamos directamente la mediación para la restitución de tu patrimonio. Nuestro objetivo final es que tu dinero regrese a tu cuenta.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Card: Compras en Línea -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-brand-blue hover:shadow-2xl transition group">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full text-brand-blue mr-4 group-hover:bg-brand-blue group-hover:text-white transition">
-                            <i class="fas fa-shopping-cart text-xl"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-gray-800">Compras Seguras</h4>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-blue mt-1 mr-2"></i> Compra solo en sitios oficiales y reconocidos.</li>
-                        <li class="flex items-start"><i class="fas fa-lock text-brand-mustard mt-1 mr-2"></i> Busca el candado y "https" en la dirección.</li>
-                        <li class="flex items-start"><i class="fas fa-credit-card text-brand-red mt-1 mr-2"></i> Usa tarjetas digitales con CVV dinámico.</li>
-                        <li class="flex items-start"><i class="fas fa-ban text-gray-400 mt-1 mr-2"></i> No guardes datos bancarios en equipos públicos.</li>
-                    </ul>
-                </div>
+    <!-- Casos que Atendemos (Originalmente Guias de Prevencion, ahora enfocado a solución) -->
+    <main id="casos" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-extrabold text-brand-blue">Especialistas en estos Tipos de Fraude</h2>
+                <p class="text-gray-600 mt-2">Si caíste en alguna de estas estafas, podemos ayudarte.</p>
             </div>
 
-            <!-- Card: Apps y Créditos -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-brand-red hover:shadow-2xl transition group">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-red-100 p-3 rounded-full text-brand-red mr-4 group-hover:bg-brand-red group-hover:text-white transition">
-                            <i class="fas fa-mobile-alt text-xl"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-gray-800">Apps de Crédito</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card: Inversiones Piramidales -->
+                <div class="bg-white rounded-lg shadow-md border-l-8 border-brand-red p-6 hover:shadow-xl transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-heading font-bold text-lg text-gray-800">Inversiones Piramidales</h4>
+                        <i class="fas fa-chart-line text-brand-red text-2xl"></i>
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-search text-brand-blue mt-1 mr-2"></i> Revisa el SIPRES antes de pedir un préstamo.</li>
-                        <li class="flex items-start"><i class="fas fa-user-secret text-brand-red mt-1 mr-2"></i> Cuidado con apps que piden acceso a tus contactos y fotos.</li>
-                        <li class="flex items-start"><i class="fas fa-file-contract text-gray-500 mt-1 mr-2"></i> Lee siempre los Términos y Condiciones.</li>
-                        <li class="flex items-start"><i class="fas fa-exclamation-triangle text-brand-mustard mt-1 mr-2"></i> Desconfía de créditos "inmediatos" sin requisitos.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Card: Venta de Vehículos -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-brand-mustard hover:shadow-2xl transition group">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-yellow-100 p-3 rounded-full text-brand-mustard mr-4 group-hover:bg-brand-mustard group-hover:text-white transition">
-                            <i class="fas fa-car text-xl"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-gray-800">Remates de Vehículos</h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Recuperamos capital invertido en esquemas Ponzi, "telares de la abundancia" o plataformas de trading falsas que desaparecen con tu dinero.
+                    </p>
+                    <div class="bg-red-50 p-3 rounded text-xs text-brand-red font-bold">
+                        <i class="fas fa-exclamation-triangle"></i> Típico: Te piden dinero para retirar ganancias.
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-globe text-brand-blue mt-1 mr-2"></i> Sitios oficiales terminan en <strong>.gob.mx</strong>.</li>
-                        <li class="flex items-start"><i class="fas fa-hand-holding-usd text-brand-red mt-1 mr-2"></i> No deposites a terceras personas.</li>
-                        <li class="flex items-start"><i class="fas fa-envelope-open-text text-gray-500 mt-1 mr-2"></i> No creas en ofertas por correo de remitentes desconocidos.</li>
-                        <li class="flex items-start"><i class="fas fa-mouse-pointer text-brand-mustard mt-1 mr-2"></i> Evita hacer clic en hipervínculos de "ofertas increíbles".</li>
-                    </ul>
                 </div>
-            </div>
 
-            <!-- Card: Fraudes Inmobiliarios -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-gray-800 hover:shadow-2xl transition group">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-gray-200 p-3 rounded-full text-gray-800 mr-4 group-hover:bg-gray-800 group-hover:text-white transition">
-                            <i class="fas fa-home text-xl"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-gray-800">Rentas Falsas</h4>
+                <!-- Card: Apps de Crédito (Montadeudas) -->
+                <div class="bg-white rounded-lg shadow-md border-l-8 border-brand-blue p-6 hover:shadow-xl transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-heading font-bold text-lg text-gray-800">Apps "Montadeudas"</h4>
+                        <i class="fas fa-mobile-alt text-brand-blue text-2xl"></i>
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-search-dollar text-brand-mustard mt-1 mr-2"></i> Desconfía de alquileres muy baratos en zonas caras.</li>
-                        <li class="flex items-start"><i class="fas fa-id-card text-brand-red mt-1 mr-2"></i> NUNCA envíes fotos de tu INE o Tarjetas por chat.</li>
-                        <li class="flex items-start"><i class="fas fa-ban text-brand-red mt-1 mr-2"></i> No deposites por adelantado sin ver el inmueble en persona.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Card: Inversiones Piramidales -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-brand-red hover:shadow-2xl transition group">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-red-100 p-3 rounded-full text-brand-red mr-4 group-hover:bg-brand-red group-hover:text-white transition">
-                            <i class="fas fa-chart-line text-xl"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-gray-800">Fraudes Piramidales</h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Detenemos el acoso y la extorsión. Gestionamos la legalidad de la deuda y protegemos tus datos personales contra la difamación.
+                    </p>
+                    <div class="bg-blue-50 p-3 rounded text-xs text-brand-blue font-bold">
+                        <i class="fas fa-shield-alt"></i> Protegemos tus contactos y fotos.
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-comments text-gray-500 mt-1 mr-2"></i> Ignora invitaciones a grupos de WhatsApp de desconocidos.</li>
-                        <li class="flex items-start"><i class="fas fa-tasks text-brand-blue mt-1 mr-2"></i> Cuidado con "tareas en redes sociales" para ganar dinero rápido.</li>
-                        <li class="flex items-start"><i class="fas fa-stop-circle text-brand-red mt-1 mr-2"></i> Si te piden dinero para retirar tus ganancias, es fraude.</li>
-                    </ul>
                 </div>
-            </div>
 
-            <!-- Card: Fraude al CEO / Telefónico -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-brand-blue hover:shadow-2xl transition group">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full text-brand-blue mr-4 group-hover:bg-brand-blue group-hover:text-white transition">
-                            <i class="fas fa-phone-slash text-xl"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-xl text-gray-800">Fraude Telefónico</h4>
+                <!-- Card: Compras y Ventas -->
+                <div class="bg-white rounded-lg shadow-md border-l-8 border-brand-mustard p-6 hover:shadow-xl transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-heading font-bold text-lg text-gray-800">Fraudes en E-Commerce</h4>
+                        <i class="fas fa-shopping-cart text-brand-mustard text-2xl"></i>
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-user-tie text-brand-dark mt-1 mr-2"></i> Criminales fingen ser "jefes" con urgencias falsas.</li>
-                        <li class="flex items-start"><i class="fas fa-check-double text-brand-blue mt-1 mr-2"></i> Verifica la identidad llamando directamente a tu superior.</li>
-                        <li class="flex items-start"><i class="fas fa-lock text-brand-red mt-1 mr-2"></i> No proporciones información confidencial de la empresa.</li>
-                    </ul>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Acción legal contra páginas falsas de venta de vehículos, remates inexistentes o tiendas virtuales que cobran y no entregan.
+                    </p>
+                    <div class="bg-yellow-50 p-3 rounded text-xs text-yellow-800 font-bold">
+                        <i class="fas fa-search"></i> Rastreo de sitios apócrifos.
+                    </div>
                 </div>
-            </div>
 
+                <!-- Card: Fraudes Inmobiliarios -->
+                <div class="bg-white rounded-lg shadow-md border-l-8 border-gray-800 p-6 hover:shadow-xl transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-heading font-bold text-lg text-gray-800">Estafas Inmobiliarias</h4>
+                        <i class="fas fa-home text-gray-800 text-2xl"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Recuperación de depósitos por rentas de inmuebles que no existen o cuya posesión es fraudulenta.
+                    </p>
+                </div>
+
+                <!-- Card: Suplantación de Identidad -->
+                <div class="bg-white rounded-lg shadow-md border-l-8 border-brand-red p-6 hover:shadow-xl transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-heading font-bold text-lg text-gray-800">Robo de Identidad</h4>
+                        <i class="fas fa-id-card text-brand-red text-2xl"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Limpieza de historial crediticio afectado por créditos solicitados a tu nombre sin tu consentimiento.
+                    </p>
+                </div>
+
+                <!-- Card: Phishing Bancario -->
+                <div class="bg-white rounded-lg shadow-md border-l-8 border-brand-blue p-6 hover:shadow-xl transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-heading font-bold text-lg text-gray-800">Cargos Bancarios</h4>
+                        <i class="fas fa-university text-brand-blue text-2xl"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Reclamación formal ante instituciones financieras por transferencias no autorizadas y vaciado de cuentas vía app.
+                    </p>
+                </div>
+
+            </div>
         </div>
     </main>
 
-    <!-- Info Section: Ciberdelitos -->
-    <section class="bg-brand-dark text-white py-16">
-        <div class="container mx-auto px-4">
+    <!-- Info Section: Autoridad -->
+    <section class="bg-brand-blue text-white py-16 relative overflow-hidden">
+        <!-- Abstract Shapes -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <h2 class="font-heading text-3xl font-bold mb-6 text-brand-mustard">NO MUERDAS EL ANZUELO</h2>
-                    <p class="mb-6 text-gray-300">
-                        Los ciberdelincuentes utilizan técnicas de <strong>Phishing</strong> (suplantación de identidad) para robar tus contraseñas y dinero.
+                    <h2 class="font-heading text-3xl font-bold mb-6 text-brand-mustard">¿POR QUÉ ELEGIR A GUARDIA DIGITAL?</h2>
+                    <p class="mb-6 text-gray-300 leading-relaxed">
+                        En Defensa y Recuperación Patrimonial, entendemos la angustia de perder tus ahorros. No somos solo un portal informativo; somos un despacho de <strong>especialistas en Derecho y Finanzas</strong> comprometidos con tu seguridad.
                     </p>
-                    <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-brand-red mb-6">
-                        <h4 class="font-bold text-white mb-2"><i class="fas fa-user-shield text-brand-red mr-2"></i> Recomendaciones Clave:</h4>
-                        <ul class="list-none space-y-2 text-sm text-gray-300">
-                            <li>• No abras correos de remitentes extraños.</li>
-                            <li>• No descargues archivos adjuntos sospechosos.</li>
-                            <li>• Verifica la URL antes de ingresar contraseñas.</li>
-                        </ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-mustard mr-3"></i>
+                            <span class="text-sm font-bold">Asesoría 100% Gratuita</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-mustard mr-3"></i>
+                            <span class="text-sm font-bold">Atención Nacional</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-mustard mr-3"></i>
+                            <span class="text-sm font-bold">Abogados Certificados</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-mustard mr-3"></i>
+                            <span class="text-sm font-bold">Confidencialidad Total</span>
+                        </div>
                     </div>
-                    <a href="tel:088" class="inline-block bg-brand-blue border border-brand-blue hover:bg-transparent hover:border-white text-white font-bold py-3 px-6 rounded transition">
-                        Reportar un sitio sospechoso
-                    </a>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                   <div class="bg-white p-2 rounded-lg transform rotate-3 hover:rotate-0 transition duration-300 shadow-xl max-w-sm">
-                        <div class="bg-brand-red text-white text-center py-4 px-6 rounded-t-lg">
-                            <i class="fas fa-exclamation-circle text-4xl mb-2"></i>
-                            <h3 class="font-bold text-xl uppercase">¡Cuidado!</h3>
-                        </div>
-                        <div class="p-6 text-brand-dark text-center">
-                            <p class="font-bold text-lg mb-2">Tu dinero puede estar en riesgo</p>
-                            <p class="text-sm text-gray-600">No confíes en cualquier app. Arriesgas tus datos personales, bancarios y tu patrimonio.</p>
-                            <div class="mt-4 pt-4 border-t border-gray-200">
-                                <span class="text-xs font-bold text-brand-blue uppercase">Guardia Digital</span>
-                            </div>
-                        </div>
-                   </div>
+                <div class="md:w-1/2 bg-white text-brand-dark p-8 rounded-lg shadow-2xl">
+                    <h3 class="font-bold text-2xl mb-4 text-center">¡Actúa Rápido!</h3>
+                    <p class="text-center text-gray-600 mb-6 text-sm">El tiempo es crucial para rastrear los fondos. Agenda tu cita hoy mismo.</p>
+                    <div class="space-y-4">
+                        <a href="tel:5535525857" class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded transition">
+                            <i class="fab fa-whatsapp text-2xl mr-3"></i> Contactar por WhatsApp
+                        </a>
+                        <a href="tel:5535525857" class="flex items-center justify-center bg-brand-blue border border-brand-blue hover:bg-white hover:text-brand-blue text-white font-bold py-4 rounded transition">
+                            <i class="fas fa-phone-alt mr-3"></i> Llamada Directa
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact & Footer -->
-    <footer id="contacto" class="bg-gray-100 pt-16 pb-8">
+    <footer id="contacto" class="bg-gray-100 pt-16 pb-8 border-t border-gray-200">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                 
@@ -282,53 +329,71 @@
                          <span class="font-heading font-extrabold text-xl uppercase text-brand-blue">Guardia Digital</span>
                     </div>
                     <p class="text-gray-600 mb-6 text-sm">
-                        Institución dedicada a la prevención del fraude y la protección del patrimonio de los ciudadanos.
+                        Institución dedicada a la defensa legal y recuperación de patrimonio ante delitos cibernéticos y fraudes financieros.
                     </p>
-                    <div class="space-y-3">
-                        <div class="flex items-start text-gray-700">
+                    <div class="space-y-4">
+                        <div class="flex items-start text-gray-700 bg-white p-3 rounded shadow-sm">
                             <i class="fas fa-map-marker-alt mt-1 mr-3 text-brand-red"></i>
-                            <p class="text-sm font-bold">Av. Reforma 231 Col. Renacimiento<br>Cuauhtemoc 06500 CDMX</p>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase font-bold">Oficinas Centrales</p>
+                                <p class="text-sm font-bold">Av. Reforma 231 Col. Renacimiento<br>Cuauhtemoc 06500 CDMX</p>
+                            </div>
                         </div>
-                        <div class="flex items-center text-gray-700">
+                        <div class="flex items-center text-gray-700 bg-white p-3 rounded shadow-sm">
                             <i class="fas fa-phone mt-1 mr-3 text-brand-red"></i>
-                            <p class="text-sm font-bold">Llama al 088 (Atención Ciudadana)</p>
-                        </div>
-                        <div class="flex items-center text-gray-700">
-                            <i class="fas fa-envelope mt-1 mr-3 text-brand-red"></i>
-                            <p class="text-sm">contacto@guardiadigital.gob.mx</p>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase font-bold">Atención Jurídica</p>
+                                <p class="text-sm font-bold">55 3552 5857</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-heading font-bold text-brand-blue text-lg mb-6 uppercase">Enlaces de Interés</h4>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="#" class="hover:text-brand-red transition">SIPRES (Registro de Instituciones)</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Buró de Entidades Financieras</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Portal de Fraudes Financieros</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Denuncia Anónima</a></li>
-                    </ul>
-                </div>
-
                 <!-- Formulario -->
-                <div>
-                    <h4 class="font-heading font-bold text-brand-blue text-lg mb-6 uppercase">Defensa Patrimonial</h4>
-                    <p class="text-xs text-gray-500 mb-4">¿Fuiste víctima de fraude? Solicita asesoría gratuita para analizar tu caso.</p>
-                    <form class="space-y-3" onsubmit="event.preventDefault(); alert('Gracias. Un asesor se pondrá en contacto.');">
-                        <input type="text" placeholder="Nombre Completo" class="w-full bg-white border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-blue">
-                        <input type="email" placeholder="Correo Electrónico" class="w-full bg-white border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-blue">
-                        <button type="submit" class="w-full bg-brand-blue text-white font-bold py-2 rounded hover:bg-blue-900 transition text-sm uppercase">
-                            Solicitar Asesoría
-                        </button>
-                    </form>
+                <div class="lg:col-span-2">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-brand-mustard">
+                        <h4 class="font-heading font-bold text-brand-blue text-xl mb-2 uppercase">Solicita tu Análisis de Caso</h4>
+                        <p class="text-sm text-gray-500 mb-6">Completa el formulario y un especialista financiero se pondrá en contacto contigo en menos de 24 horas.</p>
+                        
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Gracias. Tu solicitud ha sido enviada al departamento legal.');">
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Tipo de Fraude</label>
+                                <select class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-blue">
+                                    <option>Selecciona una opción...</option>
+                                    <option>Fraude en Inversiones / Piramidal</option>
+                                    <option>Compra en línea no recibida</option>
+                                    <option>Robo de Identidad / Créditos no reconocidos</option>
+                                    <option>Cargos bancarios no autorizados</option>
+                                    <option>Apps de Préstamos (Montadeudas)</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Nombre Completo</label>
+                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-blue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Teléfono / WhatsApp</label>
+                                <input type="tel" class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-blue">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Breve descripción del caso</label>
+                                <textarea rows="3" class="w-full bg-gray-50 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-blue"></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <button type="submit" class="w-full bg-brand-red hover:bg-red-800 text-white font-bold py-3 rounded transition text-sm uppercase tracking-wider shadow-lg">
+                                    ENVIAR SOLICITUD DE DEFENSA
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
             </div>
 
             <!-- Copyright -->
             <div class="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2025 Guardia Digital. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Guardia Digital - Recuperador de Fraudes. Todos los derechos reservados.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-brand-blue"><i class="fab fa-facebook fa-lg"></i></a>
                     <a href="#" class="hover:text-brand-blue"><i class="fab fa-twitter fa-lg"></i></a>
